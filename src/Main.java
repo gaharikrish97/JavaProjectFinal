@@ -64,7 +64,8 @@ public class Main {
                         }
 
                     case 2:
-
+                        hasValidRights = checkValidAuth();
+                        if (hasValidRights) {
                         employee[employees_counter] = new Employees();
                         employee[employees_counter].set_details();
                         employees_counter++;
@@ -73,7 +74,19 @@ public class Main {
                         System.out.println("9].GO BACK TO MAIN MENU");
                         choice = sc.nextInt();
                         break;
+                        } else {
+                            System.out.println("Invalid Access.You do not have access to Add Informations.");
+                            System.out.println("Enter 1 to display the menu again");
+                            Scanner scn = new Scanner(System.in);
+                            String menuShow = scn.nextLine();
+                            if(menuShow == Integer.toString(1)) {
+                                main_menu();
+                            }
+                            break;
+                        }
                     case 3:
+                        hasValidRights = checkValidAuth();
+                        if (hasValidRights) {
                         car[car_counter] = new Cars();
                         car[car_counter].set_details();
                         car_counter++;
@@ -82,6 +95,16 @@ public class Main {
                         System.out.println("9].GO BACK TO MAIN MENU");
                         choice = sc.nextInt();
                         break;
+                } else {
+                    System.out.println("Invalid Access.You do not have access to Add Informations.");
+                    System.out.println("Enter 1 to display the menu again");
+                    Scanner scn = new Scanner(System.in);
+                    String menuShow = scn.nextLine();
+                    if(menuShow == Integer.toString(1)) {
+                        main_menu();
+                    }
+                    break;
+                }
                     case 4:
                         for (int i = 0; i < showroom_counter; i++) {
                             showroom[i].get_details();
