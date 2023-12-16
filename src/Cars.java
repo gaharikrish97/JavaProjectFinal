@@ -1,12 +1,74 @@
 import java.util.Scanner;
 
 public class Cars extends Showroom implements utility{
-    String car_name;
-    String car_color;
-    String car_fuel_type;
-    int car_price;
-    String car_type;
-    String car_transmission;
+    private String car_name;
+    private String car_color;
+    private String car_fuel_type;
+    private int car_price;
+    private String car_type;
+    private String car_transmission;
+
+    public Cars() {
+    }
+
+    public Cars(String car_name, String car_color, String car_fuel_type, int car_price, String car_type, String car_transmission) {
+        this.car_name = car_name;
+        this.car_color = car_color;
+        this.car_fuel_type = car_fuel_type;
+        this.car_price = car_price;
+        this.car_type = car_type;
+        this.car_transmission = car_transmission;
+    }
+
+    public String getCar_name() {
+        return car_name;
+    }
+
+    public void setCar_name(String car_name) {
+        this.car_name = car_name;
+    }
+
+    public String getCar_color() {
+        return car_color;
+    }
+
+    public void setCar_color(String car_color) {
+        this.car_color = car_color;
+    }
+
+    public String getCar_fuel_type() {
+        return car_fuel_type;
+    }
+
+    public void setCar_fuel_type(String car_fuel_type) {
+        this.car_fuel_type = car_fuel_type;
+    }
+
+    public int getCar_price() {
+        return car_price;
+    }
+
+    public void setCar_price(int car_price) {
+        this.car_price = car_price;
+    }
+
+    public String getCar_type() {
+        return car_type;
+    }
+
+    public void setCar_type(String car_type) {
+        this.car_type = car_type;
+    }
+
+    public String getCar_transmission() {
+        return car_transmission;
+    }
+
+    public void setCar_transmission(String car_transmission) {
+        this.car_transmission = car_transmission;
+    }
+
+
 
     @Override
     public void get_details(){
